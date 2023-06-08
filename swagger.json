@@ -1,0 +1,1 @@
+{"openapi":"3.0.0","info":{"title":"Peanut Skills Test APi","version":"1.0.0"},"servers":[{"url":"http://localhost:3002/"}],"paths":{"/api/web/posts":{"get":{"description":"","responses":{"200":{"description":"","content":{"application/json":{}},"headers":{}}}}}}}
