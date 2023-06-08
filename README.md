@@ -24,4 +24,4 @@ The API is simulated through [mocktoon](https://mockoon.com/) file in the root o
 
 ## Instructions
 
-Full instuctions can be found [here](https://www.notion.so/teampeanut/Skills-Interview-Public-Version-556af7bbb6094ad5a6ac574df3f0d301?pvs=4) and designs [here](https://www.figma.com/file/h3XTzzSf3vPDPQFrudrWPC/Web-Experience?type=design&node-id=3826%3A134828&t=FCorTeObSpdA5KMG-1)
+Full instuctions can be found [here](https://teampeanut.notion.site/Skills-Interview-Public-Version-556af7bbb6094ad5a6ac574df3f0d301) and designs [here](https://www.figma.com/file/h3XTzzSf3vPDPQFrudrWPC/Web-Experience?type=design&node-id=3826%3A134828&t=FCorTeObSpdA5KMG-1)
