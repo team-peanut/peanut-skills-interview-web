@@ -1,0 +1,302 @@
+@use "../../styles/mediaQueries";
+
+.wrapper {
+  background-color: var(--color-footer-background);
+  color: var(--color-footer-text);
+  width: 100%;
+
+  > .container {
+    margin: 0 auto;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    @include mediaQueries.tablet {
+      display: grid;
+      grid-template-areas:
+        "install social social"
+        "contacts links links"
+        "copyright language language";
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include mediaQueries.desktop {
+      grid-template-areas:
+        "install social social"
+        "contacts links ."
+        "language links copyright";
+      grid-template-rows: auto 1fr 77px;
+      padding-bottom: 40px;
+      width: var(--breakpoint-desktop);
+    }
+
+    > section {
+      padding: 40px 45px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(var(--color-footer-text-rgb), 0.3);
+      }
+
+      @include mediaQueries.tablet {
+        &:nth-last-child(2) {
+          border-bottom: none;
+        }
+      }
+
+      @include mediaQueries.desktop {
+        border-bottom: 0;
+
+        &:not(:last-child) {
+          border-bottom: 0;
+        }
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        > li {
+          margin: 0;
+        }
+      }
+      .button {
+        border: 0;
+        background-color: white;
+        border-radius: 100px;
+      }
+
+      &.install {
+        display: flex;
+        gap: 16px;
+        grid-area: install;
+        justify-content: center;
+
+        @include mediaQueries.tablet {
+          justify-content: flex-start;
+          justify-self: unset;
+        }
+
+        > a {
+          .button {
+            height: 42px;
+            width: 120px;
+
+            @include mediaQueries.tablet {
+              border-radius: 100%;
+              height: 50px;
+              padding: 0;
+              position: relative;
+              width: 50px;
+            }
+
+            .buttonIOS {
+              height: 22px;
+              transform: translateY(-2px);
+              width: 18px;
+
+              @include mediaQueries.tablet {
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+
+            .buttonAndroid {
+              height: 22px;
+              transform: translateY(-2px);
+              width: 19px;
+
+              @include mediaQueries.tablet {
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+          }
+        }
+      }
+
+      &.social {
+        grid-area: social;
+
+        @include mediaQueries.tablet {
+          align-items: center;
+          display: flex;
+          justify-content: flex-end;
+          justify-self: unset;
+        }
+
+        > ul {
+          display: flex;
+          flex-direction: row;
+          gap: 40px;
+          justify-content: center;
+          > li {
+            a {
+              img {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+      &.contacts {
+        grid-area: contacts;
+        padding-bottom: 40px;
+        padding-top: 40px;
+
+        @include mediaQueries.desktop {
+          align-items: flex-start;
+          display: flex;
+          padding-bottom: 40px;
+        }
+
+        > ul {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          > li {
+            color: var(--color-footer-highlighted-text);
+            font-size: 15px;
+            line-height: 24px;
+
+            > a {
+              color: var(--color-footer-text);
+              display: block;
+            }
+          }
+        }
+      }
+
+      &.links {
+        grid-area: links;
+        padding-bottom: 22px;
+        padding-top: 22px;
+
+        @include mediaQueries.desktop {
+          align-items: flex-start;
+          display: flex;
+        }
+
+        > div {
+          @include mediaQueries.tablet {
+            columns: 2;
+            justify-content: flex-end;
+            justify-self: unset;
+          }
+
+          > ul {
+            align-self: flex-end;
+            display: flex;
+            flex-direction: column;
+            > li {
+              > a {
+                display: block;
+                font-size: 16px;
+                padding: 17px 0;
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+      }
+
+      &.language {
+        grid-area: language;
+
+        @include mediaQueries.tablet {
+          align-items: center;
+          display: flex;
+          justify-self: end;
+        }
+
+        @include mediaQueries.desktop {
+          align-items: flex-end;
+          display: flex;
+          justify-content: flex;
+          justify-self: unset;
+        }
+
+        > ul {
+          display: flex;
+          flex-direction: row;
+          gap: 40px;
+          justify-content: center;
+
+          @include mediaQueries.desktop {
+            gap: 20px;
+          }
+
+          &:before {
+            align-self: stretch;
+            border: 1px solid lightgrey;
+            content: "";
+          }
+
+          > li {
+            font-size: 18px;
+            line-height: 20px;
+            padding-top: 7px;
+            text-align: center;
+            &:first-child {
+              order: -1;
+            }
+
+            @include mediaQueries.desktop {
+              font-size: 16px;
+            }
+
+            > a {
+              &.selected {
+                color: var(--color-footer-highlighted-text);
+              }
+            }
+          }
+        }
+      }
+
+      &.copyright {
+        grid-area: copyright;
+
+        @include mediaQueries.tablet {
+          align-items: center;
+          display: flex;
+        }
+
+        @include mediaQueries.desktop {
+          justify-content: flex-end;
+          padding-top: 20px;
+        }
+
+        > div {
+          background-image: url("./assets/logo.svg");
+          background-position: 0 50%;
+          background-repeat: no-repeat;
+          background-size: 40px 22px;
+          line-height: 20px;
+          margin: 0 auto;
+          min-height: 22px;
+          padding-left: 48px;
+          padding-top: 3px;
+          width: fit-content;
+
+          @include mediaQueries.tablet {
+            line-height: 18px;
+            margin: 0;
+          }
+
+          @include mediaQueries.desktop {
+            font-size: 16px;
+            height: 52px;
+            line-height: 48px;
+          }
+        }
+      }
+    }
+  }
+}
