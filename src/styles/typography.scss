@@ -1,0 +1,212 @@
+@use "./mediaQueries.scss";
+
+@mixin typography-bold {
+  font-family: $font-headings;
+  font-weight: 800;
+}
+
+@mixin typography-body {
+  font-family: $font-body;
+  font-weight: normal !important;
+}
+
+@mixin typography-header-1 {
+  font-family: $font-headings;
+  font-size: 26px;
+  line-height: 30px;
+
+  @include mediaQueries.desktop {
+    font-size: 42px;
+    line-height: 48px;
+  }
+}
+
+@mixin typography-header-2 {
+  font-family: $font-headings;
+  font-size: 24px;
+  line-height: 28px;
+
+  @include mediaQueries.desktop {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+@mixin typography-header-3 {
+  font-family: $font-headings;
+  font-size: 18px;
+  line-height: 22px;
+
+  @include mediaQueries.desktop {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+@mixin typography-subheader-3 {
+  font-family: $font-body;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@mixin typography-header-4 {
+  font-family: $font-headings;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+}
+
+@mixin typography-header-5 {
+  font-family: $font-headings;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+@mixin typography-header-6 {
+  font-family: $font-headings;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 900;
+}
+
+@mixin typography-subtitle {
+  font-size: 20px;
+  line-height: 26px;
+}
+@mixin typography-subtitle-bold {
+  @include typography-subtitle;
+  @include typography-bold;
+}
+
+@mixin typography-aside-heading {
+  @include typography-bold;
+  font-family: $font-headings;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+@mixin typography-aside-footer {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  line-height: 1.67;
+}
+
+@mixin typography-subtitle-semibold {
+  @include typography-subtitle;
+
+  font-weight: bold;
+}
+
+@mixin typography-body {
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin typography-body-bold {
+  font-family: $font-body;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin typography-button {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@mixin typography-small-body {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@mixin typography-small-body-bold {
+  @include typography-small-body;
+  @include typography-bold;
+}
+
+@mixin typography-smaller-body {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin typography-menu-item {
+  font-size: 15px;
+  line-height: 1.56;
+}
+
+@mixin typography-large-list-item {
+  font-size: 16px;
+  line-height: 1.37;
+}
+
+@mixin typography-model-subtitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin typography-model-smallprint {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+@mixin typography-model-p {
+  @include typography-body;
+}
+
+@mixin typography-prompt-body {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+@mixin typography-modal-blockquote {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+
+  > cite {
+    font-weight: 200px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@mixin typography-giveaway-header {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 36px;
+
+  letter-spacing: -1px;
+}
+
+@mixin typography-giveaway-terms {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@mixin typography-form-input-text {
+  font-family: $font-body;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.57;
+}
+
+@mixin typography-cta-button {
+  font-family: $font-body;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 18px;
+}

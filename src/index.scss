@@ -1,0 +1,62 @@
+@import "//hello.myfonts.net/count/40134c";
+@font-face {
+  font-family: Kentledge;
+  src: url(https://app.peanut-app.io/fonts/KentledgeHeavy.woff) format("woff"),
+    url(https://app.peanut-app.io/fonts/KentledgeHeavy.woff2) format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: Kentledge;
+  src: url(https://app.peanut-app.io/fonts/KentledgeRegular.woff) format("woff"),
+    url(https://app.peanut-app.io/fonts/KentledgeRegular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: Kentledge;
+  src: url(https://app.peanut-app.io/fonts/KentledgeRegularItalic.woff)
+      format("woff"),
+    url(https://app.peanut-app.io/fonts/KentledgeRegularItalic.woff2)
+      format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: auto;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Kentledge;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+:root {
+  // Colours
+  --secondary-background-colour: #fde9ea;
+  --action-color: #ea515a;
+  --color-footer-background: #000000;
+  --color-footer-text: #ffffff;
+
+  // Media Queries
+  --breakpoint-tablet: 744px;
+  --breakpoint-desktop: 1200px;
+
+  --spacing-small: 10px;
+  --spacing-regular: 20px;
+  --spacing-large: 30px;
+  --spacing-xlarge: 40px;
+  --spacing-main-padding: 80px;
+
+  --main-column-width: 800px;
+}
