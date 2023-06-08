@@ -1,0 +1,12 @@
+@use "../../styles/typography";
+
+.wrapper {
+  @include typography.typography-button;
+
+  background: var(--action-color);
+  border-radius: 100px;
+  border: 0;
+  color: white;
+  padding: calc(var(--spacing-small) / 2) var(--spacing-regular);
+  width: min-content;
+}
