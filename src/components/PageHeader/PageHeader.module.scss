@@ -1,0 +1,85 @@
+@use "../../styles/typography";
+@use "../../styles/mediaQueries";
+
+.wrapper {
+  background-color: var(--secondary-background-colour);
+
+  > div {
+    display: grid;
+    grid-template-columns: 70px 1fr 70px;
+    align-items: center;
+    padding: var(--spacing-small) var(--spacing-regular);
+
+    @include mediaQueries.desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: var(--breakpoint-desktop);
+      margin: 0 auto;
+      padding: 0 var(--spacing-large);
+    }
+
+    > a.menu {
+      @include mediaQueries.desktop {
+        display: none;
+      }
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-image: url(./assets/menuMobile.svg);
+      background-size: 40px 40px;
+      background-repeat: no-repeat;
+      font-size: 1px;
+      color: transparent;
+    }
+
+    > a.logo {
+      display: block;
+      width: 32px;
+      height: 18px;
+      background-image: url(./assets/logoMobile.svg);
+      background-size: 32px 18px;
+      margin: 0 auto;
+
+      @include mediaQueries.desktop {
+        width: 88px;
+        height: 28px;
+        background-image: url(./assets/logoDesktop.svg);
+        background-size: 88px 28px;
+        margin: 0;
+      }
+
+      background-repeat: no-repeat;
+      font-size: 1px;
+      color: transparent;
+    }
+
+    > ul {
+      display: none;
+
+      @include mediaQueries.desktop {
+        display: flex;
+      }
+      list-style-type: none;
+      margin: 0;
+      gap: var(--spacing-large);
+
+      > li {
+        > a {
+          @include typography.typography-menu-item;
+          color: #000000;
+          text-decoration: none;
+          display: block;
+          padding: var(--spacing-regular) 0;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .joinButton {
+      @include mediaQueries.desktop {
+        display: none;
+      }
+    }
+  }
+}

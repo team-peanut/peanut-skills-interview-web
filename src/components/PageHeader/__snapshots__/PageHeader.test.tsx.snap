@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHeader renders as expected 1`] = `
+<DocumentFragment>
+  <header
+    class="wrapper"
+  >
+    <div>
+      <a
+        class="menu"
+        href="https://www.peanut-app.io/"
+        title="Peanut"
+      >
+        Menu
+      </a>
+      <a
+        class="logo"
+        href="https://www.peanut-app.io/"
+        title="Peanut"
+      >
+        Peanut
+      </a>
+      <ul>
+        <li>
+          <a
+            href="/planning-for-a-baby"
+          >
+            Planning for a Baby
+          </a>
+        </li>
+        <li>
+          <a
+            href="/pregnancy"
+          >
+            Pregnancy
+          </a>
+        </li>
+        <li>
+          <a
+            href="/baby"
+          >
+            Baby
+          </a>
+        </li>
+        <li>
+          <a
+            href="/toddler-and-child"
+          >
+            Toddler & Child
+          </a>
+        </li>
+        <li>
+          <a
+            href="/health-and-wellbeing"
+          >
+            Health & Wellbeing
+          </a>
+        </li>
+        <li>
+          <a
+            href="/menopause"
+          >
+            Menopause
+          </a>
+        </li>
+      </ul>
+      <button
+        class="wrapper button"
+        type="button"
+      >
+        Join
+      </button>
+    </div>
+  </header>
+</DocumentFragment>
+`;
